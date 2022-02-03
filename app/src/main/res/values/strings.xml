@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DrawableColorTintExample</string>
+    <string name="apply_default_tint_color">apply default tint color</string>
+    <string name="apply_custom_tint_color">apply custom tint color</string>
+</resources>
