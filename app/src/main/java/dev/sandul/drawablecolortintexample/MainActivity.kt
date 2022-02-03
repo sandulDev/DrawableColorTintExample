@@ -9,21 +9,30 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 
-
 class MainActivity : AppCompatActivity() {
-    lateinit var imageView: ImageView
-    lateinit var customColorButton: Button
-    lateinit var defaultColorButton: Button
+    private lateinit var imageView: ImageView
+    private lateinit var redColorButton: Button
+    private lateinit var greyColorButton: Button
+    private lateinit var greenColorButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        defaultColorButton = findViewById(R.id.defaultButton)
-        customColorButton = findViewById(R.id.customButton)
+        greyColorButton = findViewById(R.id.greyButton)
+        redColorButton = findViewById(R.id.redButton)
+        greenColorButton = findViewById(R.id.greenButton)
         imageView = findViewById(R.id.imageView)
-        defaultColorButton.setOnClickListener { applyColorTintToDrawable(Color.parseColor("#8F8F8F")) }
-        customColorButton.setOnClickListener { applyColorTintToDrawable(Color.RED) }
+
+        greyColorButton.setOnClickListener {
+            applyColorTintToDrawable(Color.GRAY)
+            imageView.clearColorFilter()
+        }
+        redColorButton.setOnClickListener {
+            applyColorTintToDrawable(Color.RED)
+            imageView.clearColorFilter()
+        }
+        greenColorButton.setOnClickListener { imageView.setColorFilter(Color.GREEN) }
     }
 
     private fun applyColorTintToDrawable(@ColorInt color: Int) {

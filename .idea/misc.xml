@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/car_ic_apps.xml" value="0.2845" />
+        <entry key="app/src/main/res/drawable/ic_baseline_emoji_people_24.xml" value="0.2845" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.333786231884058" />
       </map>
     </option>
